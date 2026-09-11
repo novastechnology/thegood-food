@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   var header = document.querySelector(".site-header");
+  var topBar = document.querySelector(".top-bar");
   var backToTop = document.querySelector(".back-to-top");
   var lastScroll = 0;
 
@@ -52,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (progressBar) progressBar.style.width = progress + "%";
     if (header) header.classList.toggle("scrolled", scrollTop > 10);
+    if (topBar) topBar.classList.toggle("is-hidden", scrollTop > 10);
     if (backToTop) backToTop.classList.toggle("visible", scrollTop > 400);
 
     lastScroll = scrollTop;
@@ -71,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
       wheelMultiplier: 1,
       smoothTouch: false,
       touchMultiplier: 1.5,
-      infinite: false
+      infinite: false,
     });
 
     function raf(time) {
@@ -96,15 +98,18 @@ document.addEventListener("DOMContentLoaded", function () {
         duration: (customDuration || 1200) / 1000,
         easing: function (t) {
           return Math.min(1, 1.001 - Math.pow(2, -10 * t));
-        }
+        },
       });
     } else {
-      var startPosition = window.pageYOffset || document.documentElement.scrollTop;
+      var startPosition =
+        window.pageYOffset || document.documentElement.scrollTop;
       var distance = targetPosition - startPosition;
       if (Math.abs(distance) < 2) return;
 
       var startTime = null;
-      var scrollDuration = customDuration || Math.min(Math.max(Math.abs(distance) * 0.5, 450), 1000);
+      var scrollDuration =
+        customDuration ||
+        Math.min(Math.max(Math.abs(distance) * 0.5, 450), 1000);
 
       function easeInOutCubic(t) {
         return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
@@ -141,10 +146,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var currentPath = window.location.pathname;
     var linkPath = href.substring(0, hashIndex);
-    var isSamePage = !linkPath || currentPath.endsWith(linkPath) || linkPath === currentPath;
+    var isSamePage =
+      !linkPath || currentPath.endsWith(linkPath) || linkPath === currentPath;
 
     if (isSamePage) {
-      var targetEl = document.getElementById(targetId) || document.querySelector('[name="' + targetId + '"]');
+      var targetEl =
+        document.getElementById(targetId) ||
+        document.querySelector('[name="' + targetId + '"]');
       if (targetEl) {
         e.preventDefault();
 
@@ -152,7 +160,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         var headerEl = document.querySelector(".site-header");
         var headerHeight = headerEl ? headerEl.offsetHeight : 76;
-        var targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - headerHeight - 16;
+        var targetPosition =
+          targetEl.getBoundingClientRect().top +
+          window.pageYOffset -
+          headerHeight -
+          16;
 
         smoothScrollTo(targetPosition);
 
@@ -197,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       },
-      { threshold: 0.05, rootMargin: "0px 0px 0px 0px" }
+      { threshold: 0.05, rootMargin: "0px 0px 0px 0px" },
     );
 
     els.forEach(function (el) {
@@ -208,7 +220,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   observeReveal(".reveal");
   observeReveal(".reveal-stagger");
-
 
   var counters = document.querySelectorAll("[data-count]");
   if ("IntersectionObserver" in window && counters.length) {
@@ -221,9 +232,11 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
-    counters.forEach(function (el) { counterObserver.observe(el); });
+    counters.forEach(function (el) {
+      counterObserver.observe(el);
+    });
   }
 
   function animateCounter(el) {
@@ -254,7 +267,12 @@ document.addEventListener("DOMContentLoaded", function () {
       var rect = card.getBoundingClientRect();
       var x = (e.clientX - rect.left) / rect.width - 0.5;
       var y = (e.clientY - rect.top) / rect.height - 0.5;
-      card.style.transform = "translateY(-6px) perspective(600px) rotateX(" + (-y * 4) + "deg) rotateY(" + (x * 4) + "deg)";
+      card.style.transform =
+        "translateY(-6px) perspective(600px) rotateX(" +
+        -y * 4 +
+        "deg) rotateY(" +
+        x * 4 +
+        "deg)";
     });
     card.addEventListener("mouseleave", function () {
       card.style.transform = "";
@@ -269,11 +287,11 @@ document.addEventListener("DOMContentLoaded", function () {
       modal.className = "form-modal-overlay";
       modal.innerHTML =
         '<div class="form-modal-card">' +
-          '<div class="form-modal-icon">✓</div>' +
-          '<h3 class="form-modal-title"></h3>' +
-          '<p class="form-modal-text"></p>' +
-          '<button class="form-modal-btn">OK</button>' +
-        '</div>';
+        '<div class="form-modal-icon">✓</div>' +
+        '<h3 class="form-modal-title"></h3>' +
+        '<p class="form-modal-text"></p>' +
+        '<button class="form-modal-btn">OK</button>' +
+        "</div>";
       document.body.appendChild(modal);
 
       var closeBtn = modal.querySelector(".form-modal-btn");
@@ -320,7 +338,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       var accessKeyInput = form.querySelector('input[name="access_key"]');
       var accessKey = accessKeyInput ? accessKeyInput.value.trim() : "";
-      if (!accessKey || accessKey === "YOUR_WEB3FORMS_ACCESS_KEY" || accessKey === "YOUR_ACCESS_KEY_HERE") {
+      if (
+        !accessKey ||
+        accessKey === "YOUR_WEB3FORMS_ACCESS_KEY" ||
+        accessKey === "YOUR_ACCESS_KEY_HERE"
+      ) {
         accessKey = "3f310507-fb89-4555-81b7-9ccddd95e01e";
         if (accessKeyInput) accessKeyInput.value = accessKey;
       }
@@ -366,9 +388,9 @@ document.addEventListener("DOMContentLoaded", function () {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Accept": "application/json"
+          Accept: "application/json",
         },
-        body: jsonPayload
+        body: jsonPayload,
       })
         .then(function (response) {
           return response.json();
@@ -376,34 +398,39 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(function (data) {
           if (data.success) {
             resultDiv.className = "form-result success";
-            resultDiv.innerHTML = "<strong>✓ Success!</strong> Your request has been sent successfully. Our team will review your specifications and get in touch.";
+            resultDiv.innerHTML =
+              "<strong>✓ Success!</strong> Your request has been sent successfully. Our team will review your specifications and get in touch.";
             form.reset();
 
             showFormModal(
               true,
               "Form Submitted Successfully!",
-              "Thank you for contacting The Good Food Company. Your request details have been sent to our sales team. A confirmation message has also been sent to your email address."
+              "Thank you for contacting The Good Food Company. Your request details have been sent to our sales team. A confirmation message has also been sent to your email address.",
             );
           } else {
             resultDiv.className = "form-result error";
-            resultDiv.innerHTML = "<strong>⚠️ Submission Failed:</strong> " + (data.message || "Something went wrong. Please try again.");
+            resultDiv.innerHTML =
+              "<strong>⚠️ Submission Failed:</strong> " +
+              (data.message || "Something went wrong. Please try again.");
 
             showFormModal(
               false,
               "Submission Failed",
-              data.message || "Something went wrong while submitting the form. Please try again."
+              data.message ||
+                "Something went wrong while submitting the form. Please try again.",
             );
           }
         })
         .catch(function (error) {
           console.error("Web3Forms submission error:", error);
           resultDiv.className = "form-result error";
-          resultDiv.innerHTML = "<strong>⚠️ Connection Error:</strong> Unable to reach server. Please check your network and try again.";
+          resultDiv.innerHTML =
+            "<strong>⚠️ Connection Error:</strong> Unable to reach server. Please check your network and try again.";
 
           showFormModal(
             false,
             "Connection Error",
-            "Unable to reach the server. Please check your internet connection and try again."
+            "Unable to reach the server. Please check your internet connection and try again.",
           );
         })
         .finally(function () {
