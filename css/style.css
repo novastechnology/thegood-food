@@ -1797,7 +1797,44 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
-.rfq-form>div {
+.rfq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .rfq-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+.rfq-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+}
+
+.rfq-submit-area {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rfq-submit-btn {
+  width: 100%;
+  padding: 16px 32px;
+  font-size: 16px;
+}
+
+.rfq-section > div {
   display: flex;
   flex-direction: column;
   gap: 8px;
