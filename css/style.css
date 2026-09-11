@@ -6205,3 +6205,9 @@ form select:focus {
   background: var(--green-hover);
   transform: translateY(-1px);
 }
+.plain-amp {
+  font-family: var(--font) !important;
+  font-style: normal !important;
+  font-weight: inherit !important;
+}
+
