@@ -2544,10 +2544,10 @@ body {
 
 .whatsapp-float {
   position: fixed;
-  bottom: 76px;
+  bottom: 24px;
   right: 24px;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: 14px;
   background: #25d366;
   color: #fff;
