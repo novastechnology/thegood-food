@@ -2712,43 +2712,7 @@ body {
     height: 72px;
   }
 
-  .nav-toggle {
-    display: block;
-  }
-
-  .header-cta {
-    display: none;
-  }
-
-  .main-nav {
-    display: none;
-    width: 100%;
-    order: 4;
-  }
-
-  .main-nav.open {
-    display: block;
-    padding: 12px 0 16px;
-    border-top: 1px solid var(--border);
-    animation: navSlideDown 0.35s var(--ease) forwards;
-  }
-
-  .site-header .container {
-    flex-wrap: wrap;
-    height: auto;
-    padding-top: 14px;
-    padding-bottom: 14px;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .main-nav a {
-    display: block;
-    padding: 10px 14px;
-  }
+  /* Nav toggle logic moved to 1147px breakpoint */
 
   .product-grid,
   .category-grid,
@@ -5643,6 +5607,10 @@ form select:focus {
     display: none;
   }
 
+}
+
+/* Navbar specific mobile breakpoint */
+@media (max-width: 1147px) {
   .nav-toggle {
     display: flex;
     align-items: center;
@@ -5687,6 +5655,9 @@ form select:focus {
     font-size: 15px;
     font-weight: 500;
   }
+}
+
+@media (max-width: 800px) {
 
   .home-intro-grid,
   .intro-grid,

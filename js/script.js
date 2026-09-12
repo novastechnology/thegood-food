@@ -17,12 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (nav) nav.classList.remove("open");
     overlay.classList.remove("open");
     document.body.style.overflow = "";
+    if (toggle) toggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
   }
 
   function openNav() {
     if (nav) nav.classList.add("open");
     overlay.classList.add("open");
     document.body.style.overflow = "hidden";
+    if (toggle) toggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
   }
 
   if (toggle && nav) {
@@ -35,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     overlay.addEventListener("click", closeNav);
     window.addEventListener("resize", function () {
-      if (window.innerWidth > 800 && nav.classList.contains("open")) {
+      if (window.innerWidth > 1147 && nav.classList.contains("open")) {
         closeNav();
       }
     });
