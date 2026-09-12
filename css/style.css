@@ -1797,15 +1797,30 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
-.rfq-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+.rfq-flex-container {
+  display: flex;
+  flex-direction: column;
   gap: 32px;
 }
 
 @media (min-width: 768px) {
-  .rfq-grid {
-    grid-template-columns: 1fr 1fr;
+  .rfq-flex-container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+  }
+}
+
+.rfq-col {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .rfq-col {
+    width: 50%;
     gap: 40px;
   }
 }

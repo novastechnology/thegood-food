@@ -151,162 +151,135 @@
               style="display: none"
             />
 
-            <div class="rfq-grid">
-              <!-- Section 1 -->
-              <div class="rfq-section">
-                <h2 class="form-section-title">1. Corporate Identity</h2>
-                <div>
-                  <label for="company">Company Legal Name</label>
-                  <input type="text" id="company" name="company" required />
-                </div>
-                <div>
-                  <label for="license">Trade License Number</label>
-                  <input
-                    type="text"
-                    id="license"
-                    name="license"
-                    placeholder="e.g. Dubai DED"
-                  />
-                </div>
-                <div>
-                  <label for="contact-name">Primary Contact Name <span class="plain-amp">&amp;</span> Title</label>
-                  <input
-                    type="text"
-                    id="contact-name"
-                    name="contact-name"
-                    required
-                  />
-                </div>
-                <div>
-                  <label for="email">Corporate Email</label>
-                  <input type="email" id="email" name="email" required />
-                </div>
-                <div>
-                  <label for="phone">Phone / WhatsApp (with country code)</label>
-                  <input type="tel" id="phone" name="phone" required />
-                </div>
-              </div>
-
-              <!-- Section 2 -->
-              <div class="rfq-section">
-                <h2 class="form-section-title">2. Commodity Requirements</h2>
-                <div>
-                  <label>Crops Required</label>
-                  <div class="checkbox-group">
-                    <label class="checkbox-label"
-                      ><input
-                        type="checkbox"
-                        name="crop"
-                        value="Premium Potatoes"
-                      />
-                      Premium Potatoes</label
-                    >
-                    <label class="checkbox-label"
-                      ><input
-                        type="checkbox"
-                        name="crop"
-                        value="Red/Yellow Onions"
-                      />
-                      Red/Yellow Onions</label
-                    >
-                    <label class="checkbox-label"
-                      ><input
-                        type="checkbox"
-                        name="crop"
-                        value="Super Premium Garlic"
-                      />
-                      Super Premium Garlic</label
-                    >
-                    <label class="checkbox-label"
-                      ><input
-                        type="checkbox"
-                        name="crop"
-                        value="Vine-Ripened Tomatoes"
-                      />
-                      Vine-Ripened Tomatoes</label
-                    >
-                    <label class="checkbox-label"><input type="checkbox" name="crop" value="Premium Indian Basmati Rice" /> Premium Indian Basmati Rice</label>
-                    <label class="checkbox-label"><input type="checkbox" name="crop" value="Premium Indian Basmati Rice (Long-Grain &amp; Aromatic)" /> Premium Indian Basmati Rice (Long-Grain<span class="plain-amp">&amp;</span>Aromatic)</label>
-                    <label class="checkbox-label"><input type="checkbox" name="crop" value="Superior Non-Basmati Rice" /> Superior Non-Basmati Rice</label>
-                    <label class="checkbox-label"><input type="checkbox" name="crop" value="High-Yield Non-Basmati Rice" /> High-Yield Non-Basmati Rice</label>
-                    <label class="checkbox-label"><input type="checkbox" name="crop" value="Nutrient-Rich Indian Pulses" /> Nutrient-Rich Indian Pulses</label>
-                    <label class="checkbox-label"><input type="checkbox" name="crop" value="Grade-A Indian Pulses &amp; Lentils" /> Grade-A Indian Pulses <span class="plain-amp">&amp;</span> Lentils</label>
-                    <label class="checkbox-label"><input type="checkbox" name="crop" value="Authentic Whole &amp; Ground Spices" /> Authentic Whole <span class="plain-amp">&amp;</span> Ground Spices</label>
-                    <label class="checkbox-label"><input type="checkbox" name="crop" value="Pure &amp; High-Oil Indian Spices (Whole &amp; Ground)" /> Pure <span class="plain-amp">&amp;</span> High-Oil Indian Spices (Whole <span class="plain-amp">&amp;</span> Ground)</label>
+            <div class="rfq-flex-container">
+              <!-- LEFT COLUMN -->
+              <div class="rfq-col">
+                <!-- Section 1 -->
+                <div class="rfq-section">
+                  <h2 class="form-section-title">1. Corporate Identity</h2>
+                  <div>
+                    <label for="company">Company Legal Name</label>
+                    <input type="text" id="company" name="company" required />
+                  </div>
+                  <div>
+                    <label for="license">Trade License Number</label>
+                    <input
+                      type="text"
+                      id="license"
+                      name="license"
+                      placeholder="e.g. Dubai DED"
+                    />
+                  </div>
+                  <div>
+                    <label for="contact-name">Primary Contact Name <span class="plain-amp">&amp;</span> Title</label>
+                    <input
+                      type="text"
+                      id="contact-name"
+                      name="contact-name"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label for="email">Corporate Email</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+                  <div>
+                    <label for="phone">Phone / WhatsApp (with country code)</label>
+                    <input type="tel" id="phone" name="phone" required />
                   </div>
                 </div>
-                <div>
-                  <label for="sizing">Sizing <span class="plain-amp">&amp;</span> Calibration</label>
-                  <select id="sizing" name="sizing">
-                    <option>Standard Export Grade</option>
-                    <option>Custom Millimeter Calibration</option>
-                    <option>Foodservice Processing Grade</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="volume">Total Volume Required</label>
-                  <input
-                    type="text"
-                    id="volume"
-                    name="volume"
-                    placeholder="e.g. 5 Reefers per month"
-                  />
-                </div>
-                <div>
-                  <label for="frequency">Frequency of Supply</label>
-                  <select id="frequency" name="frequency">
-                    <option>Spot Purchase</option>
-                    <option>Monthly Contract</option>
-                    <option>Quarterly Contract</option>
-                    <option>Annual Program</option>
-                  </select>
+
+                <!-- Section 3 -->
+                <div class="rfq-section">
+                  <h2 class="form-section-title">3. Logistics <span class="plain-amp">&amp;</span> Fulfillment</h2>
+                  <div>
+                    <label for="port">Target Port of Discharge</label>
+                    <select id="port" name="port">
+                      <option>Jebel Ali (Dubai)</option>
+                      <option>Khalifa Port (Abu Dhabi)</option>
+                      <option>Port Khalid (Sharjah)</option>
+                      <option>Dammam / Jeddah (KSA)</option>
+                      <option>Other GCC Port</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="incoterms">Incoterms Preference</label>
+                    <select id="incoterms" name="incoterms">
+                      <option>CIF (Cost, Insurance <span class="plain-amp">&amp;</span> Freight)</option>
+                      <option>CFR (Cost and Freight)</option>
+                      <option>FOB (Free on Board)</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="delivery">Required Delivery Window</label>
+                    <input type="date" id="delivery" name="delivery" />
+                  </div>
+                  <div>
+                    <label for="payment">Preferred Payment Method</label>
+                    <select id="payment" name="payment">
+                      <option>T/T (30% Deposit / 70% CAD)</option>
+                      <option>Irrevocable L/C at Sight</option>
+                    </select>
+                  </div>
                 </div>
               </div>
 
-              <!-- Section 3 -->
-              <div class="rfq-section">
-                <h2 class="form-section-title">3. Logistics <span class="plain-amp">&amp;</span> Fulfillment</h2>
-                <div>
-                  <label for="port">Target Port of Discharge</label>
-                  <select id="port" name="port">
-                    <option>Jebel Ali (Dubai)</option>
-                    <option>Khalifa Port (Abu Dhabi)</option>
-                    <option>Port Khalid (Sharjah)</option>
-                    <option>Dammam / Jeddah (KSA)</option>
-                    <option>Other GCC Port</option>
-                  </select>
+              <!-- RIGHT COLUMN -->
+              <div class="rfq-col">
+                <!-- Section 2 -->
+                <div class="rfq-section">
+                  <h2 class="form-section-title">2. Commodity Requirements</h2>
+                  <div>
+                    <label>Crops Required</label>
+                    <div class="checkbox-group">
+                      <label class="checkbox-label"><input type="checkbox" name="crop" value="Premium Potatoes" /> Premium Potatoes</label>
+                      <label class="checkbox-label"><input type="checkbox" name="crop" value="Red/Yellow Onions" /> Red/Yellow Onions</label>
+                      <label class="checkbox-label"><input type="checkbox" name="crop" value="Super Premium Garlic" /> Super Premium Garlic</label>
+                      <label class="checkbox-label"><input type="checkbox" name="crop" value="Vine-Ripened Tomatoes" /> Vine-Ripened Tomatoes</label>
+                      <label class="checkbox-label"><input type="checkbox" name="crop" value="Premium Indian Basmati Rice" /> Premium Indian Basmati Rice</label>
+                      <label class="checkbox-label"><input type="checkbox" name="crop" value="Premium Indian Basmati Rice (Long-Grain &amp; Aromatic)" /> Premium Indian Basmati Rice (Long-Grain <span class="plain-amp">&amp;</span> Aromatic)</label>
+                      <label class="checkbox-label"><input type="checkbox" name="crop" value="Superior Non-Basmati Rice" /> Superior Non-Basmati Rice</label>
+                      <label class="checkbox-label"><input type="checkbox" name="crop" value="High-Yield Non-Basmati Rice" /> High-Yield Non-Basmati Rice</label>
+                      <label class="checkbox-label"><input type="checkbox" name="crop" value="Nutrient-Rich Indian Pulses" /> Nutrient-Rich Indian Pulses</label>
+                      <label class="checkbox-label"><input type="checkbox" name="crop" value="Grade-A Indian Pulses &amp; Lentils" /> Grade-A Indian Pulses <span class="plain-amp">&amp;</span> Lentils</label>
+                      <label class="checkbox-label"><input type="checkbox" name="crop" value="Authentic Whole &amp; Ground Spices" /> Authentic Whole <span class="plain-amp">&amp;</span> Ground Spices</label>
+                      <label class="checkbox-label"><input type="checkbox" name="crop" value="Pure &amp; High-Oil Indian Spices (Whole &amp; Ground)" /> Pure <span class="plain-amp">&amp;</span> High-Oil Indian Spices (Whole <span class="plain-amp">&amp;</span> Ground)</label>
+                    </div>
+                  </div>
+                  <div>
+                    <label for="sizing">Sizing <span class="plain-amp">&amp;</span> Calibration</label>
+                    <select id="sizing" name="sizing">
+                      <option>Standard Export Grade</option>
+                      <option>Custom Millimeter Calibration</option>
+                      <option>Foodservice Processing Grade</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="volume">Total Volume Required</label>
+                    <input type="text" id="volume" name="volume" placeholder="e.g. 5 Reefers per month" />
+                  </div>
+                  <div>
+                    <label for="frequency">Frequency of Supply</label>
+                    <select id="frequency" name="frequency">
+                      <option>Spot Purchase</option>
+                      <option>Monthly Contract</option>
+                      <option>Quarterly Contract</option>
+                      <option>Annual Program</option>
+                    </select>
+                  </div>
                 </div>
-                <div>
-                  <label for="incoterms">Incoterms Preference</label>
-                  <select id="incoterms" name="incoterms">
-                    <option>CIF (Cost, Insurance <span class="plain-amp">&amp;</span> Freight)</option>
-                    <option>CFR (Cost and Freight)</option>
-                    <option>FOB (Free on Board)</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="delivery">Required Delivery Window</label>
-                  <input type="date" id="delivery" name="delivery" />
-                </div>
-                <div>
-                  <label for="payment">Preferred Payment Method</label>
-                  <select id="payment" name="payment">
-                    <option>T/T (30% Deposit / 70% CAD)</option>
-                    <option>Irrevocable L/C at Sight</option>
-                  </select>
-                </div>
-              </div>
 
-              <!-- Section 4 -->
-              <div class="rfq-section">
-                <h2 class="form-section-title">4. Additional Specifications</h2>
-                <div>
-                  <label for="instructions">Custom Instructions</label>
-                  <textarea
-                    id="instructions"
-                    name="instructions"
-                    placeholder="Packaging (25kg mesh bags, jumbo bins), origin restrictions, MRL requirements..."
-                  ></textarea>
+                <!-- Section 4 -->
+                <div class="rfq-section">
+                  <h2 class="form-section-title">4. Additional Specifications</h2>
+                  <div>
+                    <label for="instructions">Custom Instructions</label>
+                    <textarea
+                      id="instructions"
+                      name="instructions"
+                      placeholder="Packaging (25kg mesh bags, jumbo bins), origin restrictions, MRL requirements..."
+                    ></textarea>
+                  </div>
                 </div>
               </div>
             </div>
