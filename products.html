@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -214,26 +214,86 @@
               </div>
             </dl>
             <div class="prod-catalog-capacity">
-              <span>20ft FCL Capacity</span>
+              <span>20ft Normal Capacity</span>
               <strong>~17&ndash;20 Metric Tons</strong>
             </div>
           </article>
 
-          <!-- NEW PRODUCT: Premium Rice <span class="plain-amp">&amp;</span> Pulses -->
+          <!-- NEW PRODUCT: Premium Indian Basmati Rice -->
           <article class="prod-catalog-card">
-            <h3>Premium Rice <span class="plain-amp">&amp;</span> Pulses</h3>
+            <h3>Premium Indian Basmati Rice</h3>
             <dl class="prod-catalog-meta">
               <div>
                 <dt>Top Varieties</dt>
-                <dd>1121 Basmati &middot; Sona Masuri &middot; Parboiled</dd>
+                <dd>1121 Basmati &middot; Traditional Basmati &middot; Sugandha</dd>
               </div>
               <div>
                 <dt>Bulk Packaging</dt>
-                <dd>25kg / 50kg PP Woven Bags</dd>
+                <dd>25kg / 50kg PP, Jute or custom non-woven export bags</dd>
               </div>
             </dl>
             <div class="prod-catalog-capacity">
-              <span>20ft FCL Capacity</span>
+              <span>20ft Normal Capacity</span>
+              <strong>~24&ndash;26 Metric Tons</strong>
+            </div>
+          </article>
+          
+          
+          <!-- NEW PRODUCT: Superior Non-Basmati Rice -->
+          <article class="prod-catalog-card">
+            <h3>Superior Non-Basmati Rice</h3>
+            <dl class="prod-catalog-meta">
+              <div>
+                <dt>Top Varieties</dt>
+                <dd>Sona Masoori &middot; PR11 &middot; IR64 &middot; Parboiled Rice</dd>
+              </div>
+              <div>
+                <dt>Bulk Packaging</dt>
+                <dd>25kg / 50kg heavy-duty PP and Jute bags</dd>
+              </div>
+            </dl>
+            <div class="prod-catalog-capacity">
+              <span>20ft Normal Capacity</span>
+              <strong>~24&ndash;26 Metric Tons</strong>
+            </div>
+          </article>
+          
+          
+          <!-- NEW PRODUCT: Nutrient-Rich Indian Pulses -->
+          <article class="prod-catalog-card">
+            <h3>Nutrient-Rich Indian Pulses</h3>
+            <dl class="prod-catalog-meta">
+              <div>
+                <dt>Top Varieties</dt>
+                <dd>Toor Dal &middot; Moong Dal &middot; Urad Dal</dd>
+              </div>
+              <div>
+                <dt>Bulk Packaging</dt>
+                <dd>25kg / 50kg export-grade packaging</dd>
+              </div>
+            </dl>
+            <div class="prod-catalog-capacity">
+              <span>20ft Normal Capacity</span>
+              <strong>~24&ndash;26 Metric Tons</strong>
+            </div>
+          </article>
+          
+          
+          <!-- NEW PRODUCT: Authentic Whole & Ground Spices -->
+          <article class="prod-catalog-card">
+            <h3>Authentic Whole <span class="plain-amp">&amp;</span> Ground Spices</h3>
+            <dl class="prod-catalog-meta">
+              <div>
+                <dt>Top Varieties</dt>
+                <dd>Whole Red Chilli &middot; Turmeric Fingers &middot; Cumin Seeds &middot; Coriander Seeds</dd>
+              </div>
+              <div>
+                <dt>Bulk Packaging</dt>
+                <dd>25kg / 50kg export-grade packaging</dd>
+              </div>
+            </dl>
+            <div class="prod-catalog-capacity">
+              <span>20ft Normal Capacity</span>
               <strong>~24&ndash;26 Metric Tons</strong>
             </div>
           </article>
@@ -316,9 +376,15 @@
             Grades, packaging, transit temperatures, and defect tolerances for
             each export line.
           </p>
+          <div class="product-filter-container" style="display: flex; gap: 12px; justify-content: center; margin-top: 24px; flex-wrap: wrap;">
+            <button class="btn btn-filter active" data-filter="all">All</button>
+            <button class="btn btn-filter btn-light" data-filter="fresh-vegetable">Fresh Vegetable</button>
+            <button class="btn btn-filter btn-light" data-filter="rice">Rice</button>
+            <button class="btn btn-filter btn-light" data-filter="pulses-and-spices">Pulses and Spices</button>
+          </div>
         </div>
         <div class="prod-detail-list reveal">
-          <article class="prod-detail-row">
+          <article class="prod-detail-row" data-category="fresh-vegetable">
             <div class="prod-detail-media">
               <img
                 src="images/products/onion.jpg"
@@ -339,7 +405,7 @@
               </ul>
             </div>
           </article>
-          <article class="prod-detail-row prod-detail-row-reverse">
+          <article class="prod-detail-row prod-detail-row-reverse" data-category="fresh-vegetable">
             <div class="prod-detail-media">
               <img
                 src="images/products/potato.jpg"
@@ -360,7 +426,7 @@
               </ul>
             </div>
           </article>
-          <article class="prod-detail-row">
+          <article class="prod-detail-row" data-category="fresh-vegetable">
             <div class="prod-detail-media">
               <img
                 src="images/products/garlic.jpg"
@@ -381,7 +447,7 @@
               </ul>
             </div>
           </article>
-          <article class="prod-detail-row prod-detail-row-reverse">
+          <article class="prod-detail-row prod-detail-row-reverse" data-category="fresh-vegetable">
             <div class="prod-detail-media">
               <img
                 src="images/products/tomato.jpg"
@@ -404,7 +470,7 @@
           </article>
 
           <!-- NEW PRODUCT DETAIL: Whole Raw Spices -->
-          <article class="prod-detail-row">
+          <article class="prod-detail-row" data-category="pulses-and-spices">
             <div class="prod-detail-media">
               <img
                 src="images/products/spices.jpg"
@@ -447,7 +513,7 @@
           </article>
 
           <!-- NEW PRODUCT DETAIL: Premium Rice <span class="plain-amp">&amp;</span> Pulses -->
-          <article class="prod-detail-row prod-detail-row-reverse">
+          <article class="prod-detail-row prod-detail-row-reverse" data-category="rice pulses-and-spices">
             <div class="prod-detail-media">
               <img
                 src="images/products/rice.jpg"
@@ -572,6 +638,38 @@
     <button class="back-to-top" aria-label="Back to top">&#8593;</button>
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="js/script.js?v=5"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const filterButtons = document.querySelectorAll('.product-filter-container .btn-filter');
+        const articles = document.querySelectorAll('.prod-detail-list article');
+
+        filterButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            filterButtons.forEach(b => {
+              b.classList.remove('active');
+              b.classList.add('btn-light');
+            });
+            btn.classList.add('active');
+            btn.classList.remove('btn-light');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            articles.forEach(article => {
+              if (filterValue === 'all') {
+                article.style.display = '';
+              } else {
+                const categories = article.getAttribute('data-category') || '';
+                if (categories.includes(filterValue)) {
+                  article.style.display = '';
+                } else {
+                  article.style.display = 'none';
+                }
+              }
+            });
+          });
+        });
+      });
+    </script>
   </body>
 </html>
 
