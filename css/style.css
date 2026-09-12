@@ -6383,3 +6383,112 @@ form select:focus {
     padding: 24px 20px;
   }
 }
+/* 5-Image Masonry Bento Layout */
+.hero-bento-5 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  height: 420px;
+  width: 100%;
+  position: relative;
+}
+.bento-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+.bento-col.down {
+  transform: translateY(24px);
+}
+.bento-col.up {
+  transform: translateY(-24px);
+  z-index: 2;
+}
+.bento-img {
+  width: 100%;
+  flex: 1;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  min-height: 0;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+.bento-img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+  z-index: 3;
+  position: relative;
+}
+.bento-img-wrapper {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+.bento-img-wrapper.tall-side .bento-img {
+  height: 100%;
+}
+.custom-badge {
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  background: white;
+  padding: 12px 18px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  animation: floatBadge 4s ease-in-out infinite;
+}
+.custom-badge strong {
+  font-size: 1.25rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.custom-badge span {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+@media (max-width: 900px) {
+  .hero-bento-5 {
+    height: 360px;
+    gap: 12px;
+  }
+  .bento-col { gap: 12px; }
+  .bento-col.down { transform: translateY(16px); }
+  .bento-col.up { transform: translateY(-16px); }
+}
+
+@media (max-width: 600px) {
+  .hero-bento-5 {
+    height: 280px;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .bento-col { gap: 8px; }
+  .bento-col.down { transform: translateY(10px); }
+  .bento-col.up { transform: translateY(-10px); }
+  .custom-badge {
+    bottom: -10px;
+    right: -10px;
+    padding: 8px 12px;
+  }
+  .custom-badge strong {
+    font-size: 1rem;
+  }
+  .custom-badge span {
+    font-size: 0.6rem;
+  }
+}
