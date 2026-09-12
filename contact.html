@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -122,40 +122,7 @@
 
     <section class="section">
       <div class="container">
-        <div class="contact-grid reveal">
-          <div class="contact-info">
-            <div class="card">
-              <h3>Head Office &amp; Export Desk</h3>
-              <p>
-                612, Shilp One, Shilaj Cross Road, Shilaj, Ahmedabad - 380059
-              </p>
-              <p>Loading: Nhava Sheva (JNPT) · Mundra Port</p>
-            </div>
-            <div class="card">
-              <h3>Direct Contact</h3>
-              <p>Email: info@thegoodfoodcompany.com</p>
-              <p>Phone: +91 9925275921</p>
-              <p>WhatsApp: +91 8980805921</p>
-            </div>
-            <div class="card">
-              <h3>GCC Discharge Ports</h3>
-              <p>Jebel Ali · Khalifa · Port Khalid</p>
-              <p>Dammam/Jeddah · Shuwaikh · Hamad · Salalah</p>
-            </div>
-            <div class="card">
-              <h3>Business Hours (IST)</h3>
-              <p>Monday – Friday: 9:00 AM – 6:00 PM</p>
-              <p>Saturday: 9:00 AM – 1:00 PM</p>
-              <p>Export desk responds to RFQs within 4 business days.</p>
-            </div>
-            <div class="trust-badges trust-badges-dark">
-              <span>APEDA</span>
-              <span>FSSAI</span>
-              <span>Global G.A.P.</span>
-              <span>HACCP</span>
-            </div>
-          </div>
-
+        <div class="contact-layout reveal">
           <form
             class="rfq-form"
             action="https://api.web3forms.com/submit"
@@ -184,148 +151,197 @@
               style="display: none"
             />
 
-            <h2 class="form-section-title">1. Corporate Identity</h2>
-            <div>
-              <label for="company">Company Legal Name</label>
-              <input type="text" id="company" name="company" required />
-            </div>
-            <div>
-              <label for="license">Trade License Number</label>
-              <input
-                type="text"
-                id="license"
-                name="license"
-                placeholder="e.g. Dubai DED"
-              />
-            </div>
-            <div>
-              <label for="contact-name">Primary Contact Name &amp; Title</label>
-              <input
-                type="text"
-                id="contact-name"
-                name="contact-name"
-                required
-              />
-            </div>
-            <div>
-              <label for="email">Corporate Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div>
-              <label for="phone">Phone / WhatsApp (with country code)</label>
-              <input type="tel" id="phone" name="phone" required />
-            </div>
+            <div class="rfq-grid">
+              <!-- Section 1 -->
+              <div class="rfq-section">
+                <h2 class="form-section-title">1. Corporate Identity</h2>
+                <div>
+                  <label for="company">Company Legal Name</label>
+                  <input type="text" id="company" name="company" required />
+                </div>
+                <div>
+                  <label for="license">Trade License Number</label>
+                  <input
+                    type="text"
+                    id="license"
+                    name="license"
+                    placeholder="e.g. Dubai DED"
+                  />
+                </div>
+                <div>
+                  <label for="contact-name">Primary Contact Name <span class="plain-amp">&amp;</span> Title</label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="contact-name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="email">Corporate Email</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div>
+                  <label for="phone">Phone / WhatsApp (with country code)</label>
+                  <input type="tel" id="phone" name="phone" required />
+                </div>
+              </div>
 
-            <h2 class="form-section-title">2. Commodity Requirements</h2>
-            <div>
-              <label>Crops Required</label>
-              <div class="checkbox-group">
-                <label class="checkbox-label"
-                  ><input
-                    type="checkbox"
-                    name="crop"
-                    value="Premium Potatoes"
+              <!-- Section 2 -->
+              <div class="rfq-section">
+                <h2 class="form-section-title">2. Commodity Requirements</h2>
+                <div>
+                  <label>Crops Required</label>
+                  <div class="checkbox-group">
+                    <label class="checkbox-label"
+                      ><input
+                        type="checkbox"
+                        name="crop"
+                        value="Premium Potatoes"
+                      />
+                      Premium Potatoes</label
+                    >
+                    <label class="checkbox-label"
+                      ><input
+                        type="checkbox"
+                        name="crop"
+                        value="Red/Yellow Onions"
+                      />
+                      Red/Yellow Onions</label
+                    >
+                    <label class="checkbox-label"
+                      ><input
+                        type="checkbox"
+                        name="crop"
+                        value="Super Premium Garlic"
+                      />
+                      Super Premium Garlic</label
+                    >
+                    <label class="checkbox-label"
+                      ><input
+                        type="checkbox"
+                        name="crop"
+                        value="Vine-Ripened Tomatoes"
+                      />
+                      Vine-Ripened Tomatoes</label
+                    >
+                  </div>
+                </div>
+                <div>
+                  <label for="sizing">Sizing <span class="plain-amp">&amp;</span> Calibration</label>
+                  <select id="sizing" name="sizing">
+                    <option>Standard Export Grade</option>
+                    <option>Custom Millimeter Calibration</option>
+                    <option>Foodservice Processing Grade</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="volume">Total Volume Required</label>
+                  <input
+                    type="text"
+                    id="volume"
+                    name="volume"
+                    placeholder="e.g. 5 Reefers per month"
                   />
-                  Premium Potatoes</label
-                >
-                <label class="checkbox-label"
-                  ><input
-                    type="checkbox"
-                    name="crop"
-                    value="Red/Yellow Onions"
-                  />
-                  Red/Yellow Onions</label
-                >
-                <label class="checkbox-label"
-                  ><input
-                    type="checkbox"
-                    name="crop"
-                    value="Super Premium Garlic"
-                  />
-                  Super Premium Garlic</label
-                >
-                <label class="checkbox-label"
-                  ><input
-                    type="checkbox"
-                    name="crop"
-                    value="Vine-Ripened Tomatoes"
-                  />
-                  Vine-Ripened Tomatoes</label
-                >
+                </div>
+                <div>
+                  <label for="frequency">Frequency of Supply</label>
+                  <select id="frequency" name="frequency">
+                    <option>Spot Purchase</option>
+                    <option>Monthly Contract</option>
+                    <option>Quarterly Contract</option>
+                    <option>Annual Program</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Section 3 -->
+              <div class="rfq-section">
+                <h2 class="form-section-title">3. Logistics <span class="plain-amp">&amp;</span> Fulfillment</h2>
+                <div>
+                  <label for="port">Target Port of Discharge</label>
+                  <select id="port" name="port">
+                    <option>Jebel Ali (Dubai)</option>
+                    <option>Khalifa Port (Abu Dhabi)</option>
+                    <option>Port Khalid (Sharjah)</option>
+                    <option>Dammam / Jeddah (KSA)</option>
+                    <option>Other GCC Port</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="incoterms">Incoterms Preference</label>
+                  <select id="incoterms" name="incoterms">
+                    <option>CIF (Cost, Insurance <span class="plain-amp">&amp;</span> Freight)</option>
+                    <option>CFR (Cost and Freight)</option>
+                    <option>FOB (Free on Board)</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="delivery">Required Delivery Window</label>
+                  <input type="date" id="delivery" name="delivery" />
+                </div>
+                <div>
+                  <label for="payment">Preferred Payment Method</label>
+                  <select id="payment" name="payment">
+                    <option>T/T (30% Deposit / 70% CAD)</option>
+                    <option>Irrevocable L/C at Sight</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Section 4 -->
+              <div class="rfq-section">
+                <h2 class="form-section-title">4. Additional Specifications</h2>
+                <div>
+                  <label for="instructions">Custom Instructions</label>
+                  <textarea
+                    id="instructions"
+                    name="instructions"
+                    placeholder="Packaging (25kg mesh bags, jumbo bins), origin restrictions, MRL requirements..."
+                  ></textarea>
+                </div>
               </div>
             </div>
-            <div>
-              <label for="sizing">Sizing &amp; Calibration</label>
-              <select id="sizing" name="sizing">
-                <option>Standard Export Grade</option>
-                <option>Custom Millimeter Calibration</option>
-                <option>Foodservice Processing Grade</option>
-              </select>
-            </div>
-            <div>
-              <label for="volume">Total Volume Required</label>
-              <input
-                type="text"
-                id="volume"
-                name="volume"
-                placeholder="e.g. 5 Reefers per month"
-              />
-            </div>
-            <div>
-              <label for="frequency">Frequency of Supply</label>
-              <select id="frequency" name="frequency">
-                <option>Spot Purchase</option>
-                <option>Monthly Contract</option>
-                <option>Quarterly Contract</option>
-                <option>Annual Program</option>
-              </select>
-            </div>
 
-            <h2 class="form-section-title">3. Logistics &amp; Fulfillment</h2>
-            <div>
-              <label for="port">Target Port of Discharge</label>
-              <select id="port" name="port">
-                <option>Jebel Ali (Dubai)</option>
-                <option>Khalifa Port (Abu Dhabi)</option>
-                <option>Port Khalid (Sharjah)</option>
-                <option>Dammam / Jeddah (KSA)</option>
-                <option>Other GCC Port</option>
-              </select>
+            <div class="rfq-submit-area">
+              <button type="submit" class="btn rfq-submit-btn">
+                Submit Formal Request for Quote (RFQ)
+              </button>
+              <div class="form-result"></div>
             </div>
-            <div>
-              <label for="incoterms">Incoterms Preference</label>
-              <select id="incoterms" name="incoterms">
-                <option>CIF (Cost, Insurance &amp; Freight)</option>
-                <option>CFR (Cost and Freight)</option>
-                <option>FOB (Free on Board)</option>
-              </select>
-            </div>
-            <div>
-              <label for="delivery">Required Delivery Window</label>
-              <input type="date" id="delivery" name="delivery" />
-            </div>
-            <div>
-              <label for="payment">Preferred Payment Method</label>
-              <select id="payment" name="payment">
-                <option>T/T (30% Deposit / 70% CAD)</option>
-                <option>Irrevocable L/C at Sight</option>
-              </select>
-            </div>
-
-            <h2 class="form-section-title">4. Additional Specifications</h2>
-            <div>
-              <label for="instructions">Custom Instructions</label>
-              <textarea
-                id="instructions"
-                name="instructions"
-                placeholder="Packaging (25kg mesh bags, jumbo bins), origin restrictions, MRL requirements..."
-              ></textarea>
-            </div>
-            <button type="submit" class="btn">
-              Submit Formal Request for Quote (RFQ)
-            </button>
-            <div class="form-result"></div>
           </form>
+
+          <div class="contact-info-row">
+            <div class="card accent-card">
+              <h3>Head Office <span class="plain-amp">&amp;</span> Export Desk</h3>
+              <p>
+                612, Shilp One, Shilaj Cross Road, Shilaj, Ahmedabad - 380059
+              </p>
+              <p>Loading: Nhava Sheva (JNPT) · Mundra Port</p>
+            </div>
+            <div class="card">
+              <h3>Direct Contact</h3>
+              <p>Email: info@thegoodfoodcompany.com</p>
+              <p>Phone: +91 9925275921</p>
+              <p>WhatsApp: +91 8980805921</p>
+            </div>
+            <div class="card">
+              <h3>GCC Discharge Ports</h3>
+              <p>Jebel Ali · Khalifa · Port Khalid</p>
+              <p>Dammam/Jeddah · Shuwaikh · Hamad · Salalah</p>
+            </div>
+            <div class="card">
+              <h3>Business Hours <span class="plain-amp">&amp;</span> Accreditations</h3>
+              <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
+              <p>Sat: 9:00 AM - 1:00 PM</p>
+              <div class="trust-badges trust-badges-dark" style="margin-top: 16px;">
+                <span>APEDA</span>
+                <span>FSSAI</span>
+                <span>Global G.A.P.</span>
+                <span>HACCP</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -353,7 +369,7 @@
             <p><a href="products.html">Vine-Ripened Tomatoes</a></p>
           </div>
           <div>
-            <h4>Logistics &amp; QA</h4>
+            <h4>Logistics <span class="plain-amp">&amp;</span> QA</h4>
             <p><a href="logistics.html">Cold Chain Reefers</a></p>
             <p><a href="certificates.html">Quality Assurance</a></p>
             <p><a href="faq.html">Claims Protocol</a></p>
@@ -408,3 +424,5 @@
     ></script>
   </body>
 </html>
+
+
