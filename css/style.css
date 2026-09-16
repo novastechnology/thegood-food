@@ -6383,33 +6383,29 @@ form select:focus {
     padding: 24px 20px;
   }
 }
-/* 5-Image Masonry Bento Layout */
-.hero-bento-5 {
+/* 3-Column Staggered Hero Gallery */
+.hero-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  height: 420px;
+  gap: 14px;
+  align-items: center;
   width: 100%;
+  max-width: 580px;
+  max-height: 85vh;
+  margin-left: auto;
   position: relative;
 }
-.bento-col {
+.gallery-col {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  height: 100%;
-}
-.bento-col.down {
-  transform: translateY(24px);
-}
-.bento-col.up {
-  transform: translateY(-24px);
-  z-index: 2;
+  gap: 14px;
 }
 .bento-img {
   width: 100%;
-  flex: 1;
+  aspect-ratio: 1 / 1;
+  max-height: 200px;
   object-fit: cover;
-  border-radius: var(--radius-lg);
+  border-radius: 16px;
   box-shadow: var(--shadow-lg);
   min-height: 0;
   transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
@@ -6462,40 +6458,32 @@ form select:focus {
 }
 
 @media (max-width: 1024px) {
-  .hero-bento-5 {
+  .hero-gallery {
     max-width: 650px;
     margin: 0 auto;
-    height: 500px;
   }
 }
 
 @media (max-width: 900px) {
-  .hero-bento-5 {
-    height: 450px;
+  .hero-gallery {
     gap: 12px;
   }
-  .bento-col { gap: 12px; }
-  .bento-col.down { transform: translateY(16px); }
-  .bento-col.up { transform: translateY(-16px); }
+  .gallery-col { gap: 12px; }
 }
 
 @media (max-width: 768px) {
-  .hero-bento-5 {
+  .hero-gallery {
     grid-template-columns: repeat(2, 1fr);
-    height: auto;
     gap: 16px;
     margin-top: 20px;
+    align-items: stretch;
   }
-  .bento-col {
-    height: 280px;
-  }
-  .bento-col.down, .bento-col.up {
-    transform: none;
-  }
-  .bento-col:nth-child(3) {
+  .gallery-col:nth-child(3) {
     grid-column: 1 / -1;
     flex-direction: row;
-    height: 200px;
+  }
+  .gallery-col:nth-child(3) .bento-img {
+    aspect-ratio: 2 / 1;
   }
   .bento-img-wrapper {
     height: 100%;
@@ -6511,15 +6499,14 @@ form select:focus {
 }
 
 @media (max-width: 480px) {
-  .hero-bento-5 {
+  .hero-gallery {
     gap: 8px;
   }
-  .bento-col {
-    height: 220px;
+  .gallery-col {
     gap: 8px;
   }
-  .bento-col:nth-child(3) {
-    height: 150px;
+  .gallery-col:nth-child(3) {
+    height: 160px;
   }
   .custom-badge {
     bottom: -6px;
