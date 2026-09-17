@@ -5381,15 +5381,47 @@ body {
   line-height: 1.65;
 }
 
-.home-testimonial-feature {
-  max-width: 720px;
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
+  padding: 0 48px;
+  align-items: stretch;
+}
+
+@media (max-width: 992px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.home-testimonial-feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 28px 24px;
   background: linear-gradient(145deg, #fff 0%, var(--green-soft) 100%);
   border: 1px solid rgba(61, 90, 50, 0.1);
   border-radius: var(--radius-xl);
-  padding: 48px;
   box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
   position: relative;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.home-testimonial-feature > * {
+  position: relative;
+  z-index: 2;
+}
+
+.home-testimonial-feature .testimonial-author {
+  margin-top: auto;
+  padding-top: 20px;
 }
 
 .home-testimonial-feature::before {
@@ -5402,6 +5434,7 @@ body {
   color: var(--green);
   opacity: 0.15;
   line-height: 1;
+  z-index: 0;
 }
 
 .home-cta-banner {
