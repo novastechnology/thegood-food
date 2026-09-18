@@ -6460,24 +6460,36 @@ form select:focus {
   z-index: 3;
   position: relative;
 }
-.bento-img-wrapper {
-  position: relative;
+.hero-gallery .gallery-card,
+.hero-gallery .card,
+.gallery-col > div {
+  position: relative !important;
+  display: block;
   width: 100%;
-  flex: 1;
-  display: flex;
-  min-height: 0;
+  overflow: hidden;
+  border-radius: 12px;
 }
-.bento-img-wrapper.tall-side .bento-img {
+
+.hero-gallery .gallery-card img,
+.hero-gallery .card img {
+  display: block;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
 }
-.custom-badge {
+
+.gallery-card-badge {
   position: absolute;
-  bottom: -15px;
-  right: -15px;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
   background: white;
-  padding: 12px 18px;
+  padding: 8px 16px;
   border-radius: var(--radius-lg);
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6485,14 +6497,14 @@ form select:focus {
   z-index: 10;
   animation: floatBadge 4s ease-in-out infinite;
 }
-.custom-badge strong {
+.gallery-card-badge .badge-weight {
   font-size: 1.25rem;
   font-weight: 800;
   background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.custom-badge span {
+.gallery-card-badge .badge-desc {
   font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -6522,22 +6534,14 @@ form select:focus {
     margin-top: 20px;
     align-items: stretch;
   }
-  .gallery-col:nth-child(3) {
-    grid-column: 1 / -1;
-    flex-direction: row;
+  .gallery-col {
+    display: contents;
   }
-  .gallery-col:nth-child(3) .bento-img {
-    aspect-ratio: 2 / 1;
+  .gallery-card-badge {
+    bottom: 8px;
+    padding: 8px 12px;
   }
-  .bento-img-wrapper {
-    height: 100%;
-  }
-  .custom-badge {
-    bottom: -10px;
-    right: -10px;
-    padding: 10px 14px;
-  }
-  .custom-badge strong {
+  .gallery-card-badge .badge-weight {
     font-size: 1.1rem;
   }
 }
@@ -6546,21 +6550,57 @@ form select:focus {
   .hero-gallery {
     gap: 8px;
   }
-  .gallery-col {
-    gap: 8px;
-  }
-  .gallery-col:nth-child(3) {
-    height: 160px;
-  }
-  .custom-badge {
-    bottom: -6px;
-    right: -6px;
+
+  .gallery-card-badge {
+    bottom: 6px;
     padding: 6px 10px;
   }
-  .custom-badge strong {
+  .gallery-card-badge .badge-weight {
     font-size: 0.9rem;
   }
-  .custom-badge span {
+  .gallery-card-badge .badge-desc {
     font-size: 0.55rem;
+  }
+}
+
+/* Give the hero gallery wrapper an explicit bottom margin */
+.hero-gallery-container,
+.hero-gallery {
+  margin-bottom: 40px !important;
+}
+
+/* Ensure the hero section itself provides bottom padding before the stats bar */
+.hero-section,
+.hero-modern {
+  padding-bottom: 48px !important;
+}
+
+/* Prevent negative margin pulls from the stats bar */
+.stats-bar,
+.metrics-strip,
+.stats-container {
+  position: relative;
+  z-index: 10;
+  margin-top: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .hero-gallery {
+    max-height: none !important;
+    height: auto !important;
+    margin-bottom: 64px !important;
+  }
+  
+  .stats-bar,
+  .metrics-bar,
+  .hero-stats,
+  [class*="stats-strip"],
+  [class*="stats-container"],
+  .stats-bar .banner-overlap-container {
+    position: relative !important;
+    margin-top: 40px !important;
+    top: auto !important;
+    transform: none !important;
+    z-index: 5;
   }
 }
