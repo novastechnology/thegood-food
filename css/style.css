@@ -6604,3 +6604,22 @@ form select:focus {
     z-index: 5;
   }
 }
+
+.cert-hero,
+.page-banner.cert-banner {
+  position: relative;
+  width: 100%;
+  height: clamp(380px, 48vh, 520px);
+  background-size: 100% auto !important;
+  background-position: center 25% !important;
+  background-repeat: no-repeat !important;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+@media (min-width: 1600px) {
+  .cert-hero,
+  .page-banner.cert-banner {
+    background-size: cover !important;
+  }
+}
