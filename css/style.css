@@ -892,9 +892,9 @@ body {
   position: absolute;
   inset: 0;
   background: linear-gradient(105deg,
-      rgba(15, 23, 42, 0.88) 0%,
-      rgba(61, 90, 50, 0.75) 55%,
-      rgba(15, 23, 42, 0.5) 100%);
+      rgba(15, 23, 42, 0.55) 0%,
+      rgba(61, 90, 50, 0.45) 55%,
+      rgba(15, 23, 42, 0.3) 100%);
   z-index: 1;
 }
 
@@ -921,6 +921,17 @@ body {
   letter-spacing: -0.01em;
   line-height: 1.15;
   margin-bottom: 20px;
+}
+
+.hero-content h1,
+.hero h1,
+.page-hero h1,
+.cert-hero-inner h1,
+.faq-hero-inner h1,
+.log-hero-inner h1,
+.prod-hero-inner h1,
+.abt-hero-inner h1 {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
 .hero-sub {
@@ -1994,9 +2005,9 @@ body {
 
 .cert-hero .hero-overlay {
   background: linear-gradient(160deg,
-      rgba(15, 23, 42, 0.88) 0%,
-      rgba(47, 70, 38, 0.78) 50%,
-      rgba(15, 23, 42, 0.72) 100%);
+      rgba(15, 23, 42, 0.55) 0%,
+      rgba(47, 70, 38, 0.45) 50%,
+      rgba(15, 23, 42, 0.4) 100%);
 }
 
 .cert-hero-inner {
@@ -3060,9 +3071,9 @@ body {
 
 .faq-hero .hero-overlay {
   background: linear-gradient(160deg,
-      rgba(15, 23, 42, 0.88) 0%,
-      rgba(47, 70, 38, 0.78) 50%,
-      rgba(15, 23, 42, 0.72) 100%);
+      rgba(15, 23, 42, 0.55) 0%,
+      rgba(47, 70, 38, 0.45) 50%,
+      rgba(15, 23, 42, 0.4) 100%);
 }
 
 .faq-hero-inner {
@@ -3719,9 +3730,9 @@ body {
 
 .log-hero .hero-overlay {
   background: linear-gradient(160deg,
-      rgba(15, 23, 42, 0.9) 0%,
-      rgba(47, 70, 38, 0.8) 48%,
-      rgba(15, 23, 42, 0.7) 100%);
+      rgba(15, 23, 42, 0.55) 0%,
+      rgba(47, 70, 38, 0.45) 48%,
+      rgba(15, 23, 42, 0.4) 100%);
 }
 
 .log-hero-inner {
@@ -4192,9 +4203,9 @@ body {
 
 .prod-hero .hero-overlay {
   background: linear-gradient(160deg,
-      rgba(15, 23, 42, 0.9) 0%,
-      rgba(47, 70, 38, 0.78) 50%,
-      rgba(15, 23, 42, 0.68) 100%);
+      rgba(15, 23, 42, 0.55) 0%,
+      rgba(47, 70, 38, 0.45) 50%,
+      rgba(15, 23, 42, 0.4) 100%);
 }
 
 .prod-hero-inner {
@@ -4661,9 +4672,9 @@ body {
 
 .abt-hero .hero-overlay {
   background: linear-gradient(160deg,
-      rgba(15, 23, 42, 0.9) 0%,
-      rgba(47, 70, 38, 0.78) 50%,
-      rgba(15, 23, 42, 0.68) 100%);
+      rgba(15, 23, 42, 0.55) 0%,
+      rgba(47, 70, 38, 0.45) 50%,
+      rgba(15, 23, 42, 0.4) 100%);
 }
 
 .abt-hero-inner {
@@ -4981,9 +4992,9 @@ body {
 /* ===== Home page — unique layout ===== */
 .home-hero .hero-overlay {
   background: linear-gradient(160deg,
-      rgba(15, 23, 42, 0.9) 0%,
-      rgba(47, 70, 38, 0.78) 50%,
-      rgba(15, 23, 42, 0.68) 100%);
+      rgba(15, 23, 42, 0.55) 0%,
+      rgba(47, 70, 38, 0.45) 50%,
+      rgba(15, 23, 42, 0.4) 100%);
 }
 
 .home-intro-section,
